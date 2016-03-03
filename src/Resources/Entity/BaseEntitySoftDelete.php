@@ -13,19 +13,18 @@ use Gedmo\Mapping\Annotation as Gedmo;
  * @Gedmo\SoftDeleteable(fieldName="fechaBorrado")
  */
 Abstract class BaseEntitySoftDelete extends BaseEntity {
-    
+
     /**
      * @ORM\Column(type="datetime", nullable=true)
      */
-    protected $fechaBorrado;         
-    
-    
+    protected $fechaBorrado;
+
     public function getFechaBorrado() {
         return $this->fechaBorrado;
     }
 
     public function setFechaBorrado($fechaBorrado) {
         $this->fechaBorrado = $fechaBorrado;
-    }      
-    
+    }
+
 }
